@@ -10,7 +10,7 @@ GPU-accelerating C/C++ applications with CUDA and be able to:
 3. Utilize CUDA-managed memory and optimize memory migration using asynchronous prefetching
 4. Leverage command line and visual profilers to guide your work
 5. Utilize concurrent streams for instruction-level parallelism
-6. Write GPU-accelerated CU
+6. Write GPU-accelerated CUDA C/C++ applications, or refactor existing CPU-only applications, using a profile-driven approach
 
 ## Instructor-Led Workshop Outline:
 
