@@ -1,6 +1,6 @@
 # [NVIDIA DLI - Advanced Technical Workshop: Fundamentals of Accelerated Computing with CUDA C/C++](https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+C-AC-01+V1) - COMPLETED!
 
-# NVIDIA Deep Learning Institute's (DLI) Fundamentals of Accelerated Computing with CUDA C/C++
+# Fundamentals of Accelerated Computing with CUDA C/C++
 
 This repository provides an overview of the **Fundamentals of Accelerated Computing with CUDA C/C++** course, offered by NVIDIA's Deep Learning Institute (DLI). The course is designed to teach developers how to accelerate and optimize existing C/C++ applications using CUDA to harness the immense computational power of GPUs.
 
