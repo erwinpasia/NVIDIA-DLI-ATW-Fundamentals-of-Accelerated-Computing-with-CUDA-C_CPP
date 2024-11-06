@@ -2,96 +2,85 @@
 
 # Fundamentals of Accelerated Computing with CUDA C/C++
 
-This repository provides an overview of the **Fundamentals of Accelerated Computing with CUDA C/C++** course, offered by NVIDIA's Deep Learning Institute (DLI). The course is designed to teach developers how to accelerate and optimize existing C/C++ applications using CUDA to harness the immense computational power of GPUs.
+This repository provides an overview of the **Fundamentals of Accelerated Computing with CUDA C/C++** course, offered by NVIDIA's Deep Learning Institute (DLI). The course is designed to teach developers how to accelerate and optimize existing C/C++ applications using CUDA, enabling them to harness the immense computational power of GPUs.
 
-## Learning Objectives
+## Learning Objectives:
+- Understand the fundamentals of GPU architecture and how it differs from CPU-based computing.
+- Write and execute parallel code using CUDA C/C++ to accelerate computational tasks.
+- Optimize memory transfers between CPU and GPU for maximum performance.
+- Implement custom CUDA kernels for fine-grained control over parallel execution.
+- Utilize advanced techniques like shared memory and streams to optimize performance.
 
-- Write, compile, and run C/C++ programs that utilize both CPU functions and GPU kernels.
-- Parallelize serial code by refactoring loops to run on GPUs.
-- Manage memory efficiently between the CPU and GPU using CUDA tools like Unified Memory.
-- Optimize applications by exposing parallelism and leveraging CUDA streams for concurrency.
-- Use command-line and visual profiling tools to assess and improve application performance.
-
-## Overview of CUDA
-
+## Overview of CUDA C/C++:
 CUDA (Compute Unified Device Architecture) is a parallel computing platform and programming model developed by NVIDIA. It allows developers to use NVIDIA GPUs for general-purpose processing (GPGPU), enabling massive parallelism that can significantly accelerate computational tasks.
 
-### Key Concepts in CUDA
+## Key Components of the Course:
 
-- **GPU Kernels**: Functions executed in parallel on the GPU.
-- **Thread Hierarchy**: Organizing threads into blocks and grids for efficient parallel execution.
-- **Memory Management**: Techniques like Unified Memory to manage data transfer between CPU and GPU memory.
-- **Streams**: Mechanisms for asynchronous execution, allowing concurrent kernel execution and memory transfers.
+### 1. Introduction to GPU Architecture:
+The course begins by introducing NVIDIA GPU architecture and how it enables parallel computing. Participants will learn:
+- How GPUs are structured for massive parallelism.
+- Key differences between CPU and GPU execution models.
 
-## Hands-On Exercises
+### 2. Writing CUDA Kernels in C/C++:
+Participants will learn how to write custom CUDA kernels in C/C++ that offload computations to the GPU. Topics covered include:
+- Understanding the CUDA thread hierarchy (grids, blocks, threads).
+- Launching kernels on the GPU for massively parallel execution.
+- Avoiding race conditions with atomic operations.
 
-The course emphasizes practical experience through hands-on labs, where participants will:
+### 3. Memory Management in CUDA:
+Efficient memory management is crucial for maximizing performance in GPU applications. This section covers:
+- Techniques for optimizing memory bandwidth using memory coalescing.
+- Managing data transfers between host (CPU) and device (GPU).
+- Using on-device shared memory to minimize data transfer overhead.
 
-1. Write and compile CUDA C/C++ programs that offload computations to the GPU.
-2. Refactor serial loops to execute in parallel using GPU threads.
-3. Optimize memory usage with CUDA Unified Memory, reducing overhead from manual memory transfers.
-4. Use asynchronous streams to overlap computation with data transfers for improved performance.
+### 4. Performance Optimization Techniques:
+The course provides strategies for tuning performance, including:
+- Profiling GPU applications using tools like `nvprof` and Nsight Systems.
+- Optimizing kernel execution by adjusting thread block sizes and grid dimensions.
+- Utilizing streams for concurrent kernel execution and overlapping computation with data transfers.
 
-### Key Tools, Libraries, and Frameworks
+### 5. Advanced CUDA Features:
+Participants will explore advanced features of CUDA such as:
+- **Streams**: For asynchronous execution, allowing concurrent kernel execution and memory transfers.
+- **Unified Memory**: Simplifies memory management by automatically migrating data between CPU and GPU.
 
-- **CUDA Toolkit**: A collection of tools, libraries, and APIs for developing GPU-accelerated applications.
-- **Nsight Systems**: A performance analysis tool for optimizing CUDA applications.
-- **nvprof & nsys**: Command-line profilers used to analyze kernel execution times and memory usage.
+## Key Tools and Libraries:
 
-## Memory Management and Optimization
+### CUDA Toolkit:
+Participants will work with the CUDA Toolkit, which provides essential tools such as:
+- The CUDA runtime API for managing GPU resources.
+- Profiling tools like `nvprof` and Nsight Systems for performance analysis.
 
-One major focus of the course is teaching how to manage memory efficiently between the CPU and GPU using **CUDA Unified Memory**, which simplifies memory allocation by automatically migrating data between host and device as needed. Participants will also learn how to optimize memory transfers using techniques like asynchronous prefetching.
+### Nsight Systems:
+A performance analysis tool used to identify bottlenecks in GPU applications, helping developers optimize their code further.
 
-### Key Benefits of Unified Memory:
-- Simplifies memory management by eliminating manual data transfers.
-- Reduces development time while maintaining high performance.
-  
-## Asynchronous Streaming for Concurrency
+## End-to-End Workflow Acceleration:
+By the end of the course, participants will be able to build fully functional, end-to-end workflows that leverage GPU acceleration at every stage—from data processing to algorithm execution. This includes:
+- Accelerating linear algebra operations originally designed for CPUs.
+- Implementing complex simulations or scientific computations using GPUs.
 
-The course also covers how to use **CUDA streams** to enable asynchronous execution, allowing participants to overlap kernel execution with memory transfers. This results in better utilization of GPU resources and improved application performance.
+## Best Practices for Refactoring CPU Workflows:
+The course emphasizes best practices for refactoring existing CPU-based workflows into GPU-based ones:
+- Identify computational bottlenecks where GPUs can provide significant speedups.
+- Use CUDA libraries like cuBLAS or cuFFT where applicable to accelerate common tasks without writing custom kernels from scratch.
 
-### Benefits of Asynchronous Execution:
-- Overlap computation with data transfers for better resource utilization.
-- Execute multiple kernels concurrently for faster overall execution.
+## Comparison Between CPU vs. GPU Workflows:
 
-## End-to-End Workflow Acceleration
+| Aspect                   | CPU Workflow (Traditional)                      | GPU Workflow (CUDA C/C++)                                 |
+|--------------------------|-------------------------------------------------|-----------------------------------------------------------|
+| Data Processing Time      | Slower due to sequential execution              | Faster due to parallel processing on GPUs                  |
+| Algorithm Execution Time  | Longer due to limited CPU cores                 | Shorter due to massive parallelism on GPUs                 |
+| Scalability               | Limited by CPU resources                        | Scalable across multiple GPUs                              |
+| API Familiarity           | Standard C/C++                                  | Similar APIs via CUDA extensions                           |
 
-The course emphasizes building efficient workflows where every stage—from writing GPU kernels to optimizing memory usage—is optimized using profiling tools like Nsight Systems. By integrating these tools into their workflow, participants can achieve significant speedups compared to traditional CPU-based methods.
+## Conclusion:
+By completing this course, participants will gain hands-on experience in building high-performance applications using NVIDIA's CUDA C/C++ framework. They will be equipped with the skills necessary to:
 
-### Benefits of Optimized Workflows:
-- Faster execution times due to parallelization on GPUs.
-- Scalability across larger datasets without sacrificing performance.
+- Refactor existing CPU-based applications into faster, GPU-based ones.
+- Write new custom kernels for advanced parallel processing tasks.
+- Optimize memory management and kernel execution for maximum performance.
 
-## Final Project: Particle Simulation Acceleration
-
-In the final project, participants will apply their knowledge by accelerating a fully functional CPU-only particle simulator. This project will involve:
-
-- Writing GPU kernels to simulate particle interactions in parallel.
-- Managing memory between the CPU and GPU efficiently using Unified Memory.
-- Profiling the application using Nsight Systems to identify bottlenecks and improve performance.
-
-## Prerequisites
-
-Participants should have basic competency in C/C++, including familiarity with variable types, loops, conditional statements, functions, and arrays. No prior knowledge of CUDA programming is required.
-
-Suggested preparation materials:
-- Introductory C/C++ programming tutorials
-- Basic understanding of parallel computing concepts
-
-## Certificate
-
-Upon successful completion of the course assessment, participants will receive an official **NVIDIA DLI certificate**, recognizing their subject matter competency in accelerated computing with CUDA C/C++.
-
-## Conclusion
-
-By completing this course, participants will gain hands-on experience in accelerating real-world applications using CUDA. The knowledge gained will enable them to:
-
-- Refactor existing CPU-based applications for massive speedups using GPUs.
-- Build new GPU-accelerated applications from scratch.
-- Apply advanced optimization techniques like asynchronous streaming and memory management.
-
-This course is ideal for developers who are familiar with C/C++ programming but want to explore how GPU acceleration can dramatically improve performance in computationally intensive tasks.
-
+This course is ideal for developers who have experience with C/C++ programming but want to explore how GPU acceleration can significantly improve the performance of their applications.
 
 ## Instructor-Led Workshop Outline:
 
