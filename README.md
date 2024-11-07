@@ -54,15 +54,12 @@ Participants will work with the CUDA Toolkit, which provides essential tools suc
 ### Nsight Systems:
 A performance analysis tool used to identify bottlenecks in GPU applications, helping developers optimize their code further.
 
-## End-to-End Workflow Acceleration:
-By the end of the course, participants will be able to build fully functional, end-to-end workflows that leverage GPU acceleration at every stage—from data processing to algorithm execution. This includes:
-- Accelerating linear algebra operations originally designed for CPUs.
-- Implementing complex simulations or scientific computations using GPUs.
-
 ## Best Practices for Refactoring CPU Workflows:
 The course emphasizes best practices for refactoring existing CPU-based workflows into GPU-based ones:
 - Identify computational bottlenecks where GPUs can provide significant speedups.
 - Use CUDA libraries like cuBLAS or cuFFT where applicable to accelerate common tasks without writing custom kernels from scratch.
+- Accelerating linear algebra operations originally designed for CPUs.
+- Implementing complex simulations or scientific computations using GPUs.
 
 ## Comparison Between CPU vs. GPU Workflows:
 
