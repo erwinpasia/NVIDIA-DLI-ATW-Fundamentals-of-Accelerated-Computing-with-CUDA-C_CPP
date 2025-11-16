@@ -87,10 +87,10 @@ This course is ideal for developers who have experience with C/C++ programming b
     </a>
 </p>
 
-## [Certificate Of Competency:](https://learn.nvidia.com/certificates?id=d747aca4c5f9467cb46d785ed401c6ea)
+## [Certificate Of Competency:](https://learn.nvidia.com/certificates?id=2NmFO4ISQaGCCSDGXK3jdg)
 
 <p style="text-align:center">
-    <a href="https://learn.nvidia.com/certificates?id=d747aca4c5f9467cb46d785ed401c6ea" target="_blank">
+    <a href="https://learn.nvidia.com/certificates?id=2NmFO4ISQaGCCSDGXK3jdg" target="_blank">
     <img src="nvidia_cuda_portfolio/images/CC_FAC_CUDA_C_CPP.png" alt="NVIDIA-DLI-Fundamentals of Accelerated Computing with CUDA C/C++"  />
     </a>
 </p>
